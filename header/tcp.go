@@ -152,7 +152,7 @@ func TCPRecv(srcPort int, forward bool) {
 				case 2:
 					goodIP := packet.SrcIP()
 					_, ok := IPMap[goodIP.String()]
-					if ok {
+					if !ok {
 						continue
 					}
 
